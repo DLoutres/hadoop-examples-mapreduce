@@ -1,0 +1,47 @@
+[33mcommit f43a6557457104dfa7b647cad419542fe2ff1e5f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Jacques DAI <dai.jacques8@outlook.fr>
+Date:   Sun Nov 8 14:58:26 2020 +0100
+
+    SOP = Screens On Putty
+
+[33mcommit 13038ec1ff708ff68e83631a564eea8fec342b0b[m
+Author: Jacques DAI <dai.jacques8@outlook.fr>
+Date:   Sun Nov 8 14:55:24 2020 +0100
+
+    Screens of Jobs done on Putty
+
+[33mcommit bb0cff8e0165f8aacd0a95666c12235bb8a38c9a[m
+Author: Jacques DAI <dai.jacques8@outlook.fr>
+Date:   Sun Nov 8 14:04:00 2020 +0100
+
+    Species
+
+[33mcommit 397ca690bc7cf648c6dc8e39544402e93f4bbda9[m
+Author: Jacques DAI <dai.jacques8@outlook.fr>
+Date:   Sun Nov 8 03:39:23 2020 +0100
+
+    Rounding Distinct
+
+[33mcommit 0195a0bd7e55c095afe4dcd425f561ad2a7b22bd[m[33m ([m[1;31mmakayel/main[m[33m, [m[1;31mmakayel/HEAD[m[33m)[m
+Author: Michael HATOUM <michaelhatoum@gmail.com>
+Date:   Tue Oct 27 22:15:27 2020 +0100
+
+    add trees.csv data
+
+[33mcommit da6fcb6eb9bf8e99dc9d5ba060ab6469e8ca18ee[m
+Author: Michael HATOUM <michaelhatoum@gmail.com>
+Date:   Fri Oct 23 17:10:48 2020 +0200
+
+    test: add unit test for mapper/reducer
+
+[33mcommit f14e45cfa0d29fd5bda69b9c1268a59245dbad70[m
+Author: Michael HATOUM <michaelhatoum@gmail.com>
+Date:   Tue Oct 20 14:24:21 2020 +0200
+
+    Add .idea directory
+
+[33mcommit 25fb652db3561ce456b075d36a94a2123b445526[m
+Author: Michael HATOUM <michaelhatoum@gmail.com>
+Date:   Mon Oct 19 17:57:31 2020 +0200
+
+    first commit

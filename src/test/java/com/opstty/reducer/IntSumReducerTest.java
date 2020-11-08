@@ -29,15 +29,11 @@ public class IntSumReducerTest {
 
     @Test
     public void testReduce() throws IOException, InterruptedException {
-        String key = "7; 8; 19; 7; 19";
-        String[] expectedArray = {"7","8","19"};
-        Iterable<NullWritable> value = new Iterable<NullWritable>() {
-            @Override
-            public Iterator<NullWritable> iterator() {
-                return null;
-            }
-        };
-        this.intSumReducer.reduce(new Text(key),value, this.context);
-        verify(this.context).write(new Text(key), NullWritable.get());
+        String key = "beau, 1; toi,1; toi,1";
+        String[] expectedArray = {"beau,1","toi,2"};
+        IntWritable value = new IntWritable(1);
+        Iterable<IntWritable> values = Arrays.asList(value,value,value);
+        this.intSumReducer.reduce(new Text(key),values, this.context);
+        verify(this.context).write(new Text(key), new IntWritable(3));
     }
 }

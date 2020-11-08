@@ -1,6 +1,7 @@
 package com.opstty.mapper;
 
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.junit.Before;
@@ -17,7 +18,7 @@ import static org.mockito.Mockito.verify;
 @RunWith(MockitoJUnitRunner.class)
 public class TokenizerMapperTest {
     @Mock
-    private Mapper.Context context;
+    private Mapper<org.apache.hadoop.io.LongWritable, org.apache.hadoop.io.Text, org.apache.hadoop.io.Text, org.apache.hadoop.io.NullWritable>.Context context;
     private TokenizerMapper tokenizerMapper;
 
     @Before
@@ -27,9 +28,9 @@ public class TokenizerMapperTest {
 
     @Test
     public void testMap() throws IOException, InterruptedException {
-        String value = "foo bar tux";
+        String value = "Paris;7;beau";
         this.tokenizerMapper.map(null, new Text(value), this.context);
-        verify(this.context, times(3))
-                .write(new Text("tux"), new IntWritable(1));
+        verify(this.context, times(1))
+                .write(new Text("7"), NullWritable.get());
     }
 }

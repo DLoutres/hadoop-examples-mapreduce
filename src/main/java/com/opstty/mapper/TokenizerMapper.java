@@ -16,7 +16,7 @@ public class TokenizerMapper extends Mapper<LongWritable, Text, Text, NullWritab
             throws IOException, InterruptedException {
         String line = value.toString();
         String[] column = line.split(";");
-        String rounding = column[1];
+        String rounding = column[3];
         word.set(rounding);
         context.write(word, NullWritable.get());
     }

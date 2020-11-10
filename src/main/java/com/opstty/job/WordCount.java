@@ -1,5 +1,6 @@
 package com.opstty.job;
 
+
 import com.opstty.mapper.TokenizerMapper;
 import com.opstty.reducer.IntSumReducer;
 import org.apache.hadoop.conf.Configuration;
@@ -11,6 +12,7 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
+
 
 public class WordCount {
     public static void main(String[] args) throws Exception {
@@ -26,7 +28,7 @@ public class WordCount {
         job.setCombinerClass(IntSumReducer.class);
         job.setReducerClass(IntSumReducer.class);
         job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(IntWritable.class);
+        job.setOutputValueClass(Text.class);
         for (int i = 0; i < otherArgs.length - 1; ++i) {
             FileInputFormat.addInputPath(job, new Path(otherArgs[i]));
         }

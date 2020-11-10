@@ -18,7 +18,7 @@ import static org.mockito.Mockito.verify;
 @RunWith(MockitoJUnitRunner.class)
 public class TokenizerMapperTest {
     @Mock
-    private Mapper<org.apache.hadoop.io.LongWritable, org.apache.hadoop.io.Text, org.apache.hadoop.io.Text, org.apache.hadoop.io.IntWritable>.Context context;
+    private Mapper<org.apache.hadoop.io.LongWritable, org.apache.hadoop.io.Text, org.apache.hadoop.io.Text, org.apache.hadoop.io.Text>.Context context;
     private TokenizerMapper tokenizerMapper;
 
     @Before
@@ -28,9 +28,9 @@ public class TokenizerMapperTest {
 
     @Test
     public void testMap() throws IOException, InterruptedException {
-        String value = "Paris;7;beau;maclura";
-        this.tokenizerMapper.map(null, new Text(value), this.context);
+        String value = "89;7;5;5;8;3;15;7";
+        this.tokenizerMapper.map(context.getCurrentKey(), new Text(value), this.context);
         verify(this.context, times(1))
-                .write(new Text("maclura"), new IntWritable(1));
+                .write(new Text("15"), new Text(""));
     }
 }
